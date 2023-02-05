@@ -42,6 +42,10 @@ public:
     Eigen::Matrix<float, Dx, 1> Filter(Eigen::Matrix<float, Du, 1> u_input, Eigen::Matrix<float, Dy, 1> y_input, const float &dt)
     {
         this->dt = dt;
+        predict(u_input, dt, proc_noise_);
+        innovate(y_input, obs_noise_);
+        update();
+        return this->state();
     }
 
 private:
