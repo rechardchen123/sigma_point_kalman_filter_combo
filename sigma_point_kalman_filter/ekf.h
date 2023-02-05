@@ -255,7 +255,7 @@ private:
     Eigen::Matrix<float, Dy, Dy> inov_covar_;
     Eigen::Matrix<float, Dx, 1> proc_noise_;
     Eigen::Matrix<float, Dy, 1> obs_noise_;
-    Eigen::Matrix<float Dx, Dx> proc_jacobian_F;
+    Eigen::Matrix<float, Dx, Dx> proc_jacobian_F;
     Eigen::Matrix<float, Dy, Dy> proc_jacobian_G;
 };
 } // namespace spkf
