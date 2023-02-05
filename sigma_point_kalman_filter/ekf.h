@@ -197,38 +197,47 @@ private:
     {
         return state_;
     }
+
     inline const Eigen::Matrix<float, Dx, Dx> &covar() const
     {
         return covar_;
     }
+
     inline const Eigen::Matrix<float, Dy, 1> &observation() const
     {
         return observation_;
     }
+
     inline const Eigen::Matrix<float, Dy, 1> &innovation() const
     {
         return innovation_;
     }
+
     inline const Eigen::Matrix<float, Dx, Dx> &proc_covar() const
     {
         return proc_covar_;
     }
+
     inline const Eigen::Matrix<float, Dy, Dy> &obs_covar() const
     {
         return obs_covar_;
     }
+
     inline const Eigen::Matrix<float, Dx, Dy> &kalman_gain() const
     {
         return kalman_gain_;
     }
+
     inline const Eigen::Matrix<float, Dy, Dy> &inov_covar() const
     {
         return inov_covar_;
     }
+
     inline const Eigen::Matrix<float, Dx, 1> &proc_noise() const
     {
         return proc_noise_;
     }
+
     inline const Eigen::Matrix<float, Dy, 1> &obs_noise() const
     {
         return obs_noise_;
@@ -249,6 +258,7 @@ private:
                                               const Eigen::Matrix<float, Dy, 1> &)>
         G;
 
+    /*Matrix definitions*/
     Eigen::Matrix<float, Dx, 1> state_;
     Eigen::Matrix<float, Dx, Dx> covar_;
     Eigen::Matrix<float, Dy, 1> observation_;
